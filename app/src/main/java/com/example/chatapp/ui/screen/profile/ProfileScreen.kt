@@ -6,10 +6,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.chatapp.ui.theme.ChatAppTheme
 
 @Composable
-fun ProfileScreen(){
+fun ProfileScreen(
+    navigateToListScreen: () -> Unit
+){
     Scaffold(
         topBar = {
-            ProfileBar()
+            ProfileBar(
+                navigateToListScreen = navigateToListScreen
+            )
         },
         content = {
             ProfileContent()
@@ -21,6 +25,6 @@ fun ProfileScreen(){
 @Composable
 fun ProfileScreenPreview(){
     ChatAppTheme {
-        ProfileScreen()
+        ProfileScreen({})
     }
 }

@@ -8,14 +8,16 @@ import com.example.chatapp.ui.screen.list.ListContent
 import com.example.chatapp.ui.theme.ChatAppTheme
 
 @Composable
-fun ListScreen(){
+fun ListScreen(
+    navigateToProfileScreen: () -> Unit
+){
 
     Scaffold(
         topBar = {
             ListBar()
         },
         content = {
-            ListContent()
+            ListContent(navigateToProfileScreen = navigateToProfileScreen)
         }
     )
 }
@@ -24,6 +26,5 @@ fun ListScreen(){
 @Composable
 fun ListScreenPreview(){
     ChatAppTheme {
-        ListScreen()
     }
 }

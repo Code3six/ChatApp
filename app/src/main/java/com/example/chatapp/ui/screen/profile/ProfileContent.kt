@@ -132,7 +132,7 @@ fun PhoneRow(){
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun ProfileContentPreview(){
     ChatAppTheme { ProfileContent() }
